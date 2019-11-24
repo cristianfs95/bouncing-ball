@@ -1,0 +1,20 @@
+@function twoElem($i) {
+    $value: ($i%2)+1;
+    @return -$value
+}
+
+@function listFor($var) {
+    @return ($var, $var, $var, $var, $var)
+}
+
+@mixin keyframe($top, $width, $border-radius) {
+    @each $percentage in map-get($animation, "percentage") {
+        $i: index(map-get($animation, "percentage"), $percentage);
+        #{$percentage} {
+            top: nth($top, $i);
+            width: nth($width, $i);
+            border-radius: nth($border-radius, $i);
+            animation-timing-function: nth(map-get($animation, "timing"), twoElem($i));
+        }
+    }
+}

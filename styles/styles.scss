@@ -1,0 +1,55 @@
+@import 'constants';
+@import 'helpers'
+
+
+@keyframes bouncing {
+    @include keyframe(
+        map-get($ball, "animation-top"),
+        listFor(map-get($ball, "width")),
+        listFor(50%)
+    )
+}
+
+@keyframes shadowing {
+    @include keyframe(
+        map-get($shadow, "animation-top"),
+        map-get($shadow, "animation-width"),
+        map-get($shadow, "animation-border-radius"))
+}
+
+// Ball
+.ball {
+    position: relative;
+    display: block;
+    height: map-get($ball, "height");
+    width: map-get($ball, "width");
+    left: map-get($ball,"width")/2;
+    background: 
+      linear-gradient(
+        to top,
+        map-get($ball, "color") 20%, $transparency
+      );
+    border-radius: 50%;
+    opacity: 1;
+    animation: bouncing 1s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Shadow
+.ball::before {
+    content:"";
+    position: absolute;
+    display: block;
+    background: map-get($shadow, "color");
+    bottom: 0;
+    top: 95%;
+    height: map-get($shadow, "height");
+    width: map-get($shadow, "width");
+    z-index: -1;
+    border-radius: 30px / 40px;	
+    box-shadow: 0px 0 20px 35px map-get($shadow, "color");
+    transform: scaleY(.3);
+    animation: shadowing 1s infinite;
+}

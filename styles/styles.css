@@ -1,0 +1,194 @@
+@-webkit-keyframes bouncing {
+  0% {
+    top: 50px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  35% {
+    top: 110px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  50% {
+    top: 150px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    top: 110px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    top: 50px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@keyframes bouncing {
+  0% {
+    top: 50px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  35% {
+    top: 110px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  50% {
+    top: 150px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    top: 110px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    top: 50px;
+    width: 200px;
+    border-radius: 50%;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@-webkit-keyframes shadowing {
+  0% {
+    top: 300px;
+    width: 80px;
+    border-radius: 0.75;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  35% {
+    top: 240px;
+    width: 50px;
+    border-radius: 0.825;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  50% {
+    top: 200px;
+    width: 15px;
+    border-radius: 1;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    top: 240px;
+    width: 50px;
+    border-radius: 0.825;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    top: 300px;
+    width: 80px;
+    border-radius: 0.75;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@keyframes shadowing {
+  0% {
+    top: 300px;
+    width: 80px;
+    border-radius: 0.75;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  35% {
+    top: 240px;
+    width: 50px;
+    border-radius: 0.825;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  50% {
+    top: 200px;
+    width: 15px;
+    border-radius: 1;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    top: 240px;
+    width: 50px;
+    border-radius: 0.825;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    top: 300px;
+    width: 80px;
+    border-radius: 0.75;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+.ball {
+  position: relative;
+  display: block;
+  height: 200px;
+  width: 200px;
+  left: 100px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, teal), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, teal 20%, rgba(0, 0, 0, 0));
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-animation: bouncing 1s infinite;
+          animation: bouncing 1s infinite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ball::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: rgba(20, 20, 20, 0.1);
+  bottom: 0;
+  top: 95%;
+  height: 75px;
+  width: 80px;
+  z-index: -1;
+  border-radius: 30px / 40px;
+  -webkit-box-shadow: 0px 0 20px 35px rgba(20, 20, 20, 0.1);
+          box-shadow: 0px 0 20px 35px rgba(20, 20, 20, 0.1);
+  -webkit-transform: scaleY(0.3);
+          transform: scaleY(0.3);
+  -webkit-animation: shadowing 1s infinite;
+          animation: shadowing 1s infinite;
+}
+/*# sourceMappingURL=styles.css.map */

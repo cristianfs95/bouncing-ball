@@ -1,0 +1,25 @@
+
+$transparency:  rgba(0,0,0,0);
+
+$animation: (
+    "timing": (ease-in, ease-out),
+    "percentage": (0%, 35%, 50%, 65%, 100%)
+);
+
+$ball: (
+    "color": rgba(0,128,128,1),
+    "width": 200px,
+    "height": 200px,
+
+    "animation-top": (50px, 110px, 150px, 110px, 50px)
+);
+
+$shadow: (
+    "color": rgba(20, 20, 20, .1),
+    "width": 80px,
+    "height": 75px,
+
+    "animation-top": (300px, 240px, 200px, 240px, 300px),
+    "animation-width": (80px, 50px, 15px, 50px, 80px),
+    "animation-border-radius": (0.75, 0.825, 1, 0.825, 0.75)
+);
